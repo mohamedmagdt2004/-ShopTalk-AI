@@ -1,0 +1,46 @@
+SELECT TOP 10 * 
+FROM retail_orders;
+
+SELECT COUNT(*) 
+FROM retail_orders;
+
+
+SELECT 
+    Category,
+    SUM((List_Price - cost_price) * Quantity) AS Profit
+FROM retail_orders
+GROUP BY Category
+ORDER BY Profit DESC;
+
+
+SELECT 
+    Product_Id,
+    SUM(Quantity) AS Total_Sales
+FROM retail_orders
+GROUP BY Product_Id
+ORDER BY Total_Sales DESC;
+
+
+SELECT 
+    Region,
+    SUM(CAST(List_Price AS FLOAT) * CAST(Quantity AS FLOAT)) AS Sales
+FROM retail_orders
+GROUP BY Region
+ORDER BY Sales DESC;
+
+
+SELECT 
+    Discount_Percent,
+    AVG((List_Price - cost_price) * Quantity) AS Avg_Profit
+FROM retail_orders
+GROUP BY Discount_Percent
+ORDER BY Discount_Percent;
+
+
+SELECT TOP 10
+    Product_Id,
+    SUM((List_Price - cost_price) * Quantity) AS Profit
+FROM retail_orders
+GROUP BY Product_Id
+ORDER BY Profit DESC;
+

@@ -1,0 +1,102 @@
+[2026-05-15 21:38:08] [SUCCESS]
+Question: show profit by category
+SQL: SELECT 
+    Category,
+    SUM(
+        (CAST(List_Price AS FLOAT) * CAST(Quantity AS FLOAT)) - 
+        (CAST(cost_price AS FLOAT) * CAST(Quantity AS FLOAT)) - 
+        ((CAST(List_Price AS FLOAT) * CAST(Quantity AS FLOAT) * CAST(Discount_Percent AS FLOAT)) / 100.0)
+    ) AS Profit
+FROM 
+    retail_orders
+GROUP BY 
+    Category
+Insight: The highest value in Profit belongs to Technology The dataset contains 3 rows.
+--------------------------------------------------
+[2026-05-15 21:38:22] [SUCCESS]
+Question: مين فاز بكاس العالم ؟
+SQL: SELECT 'No information about World Cup is available in this table' AS Result
+Insight: The dataset contains 1 rows.
+--------------------------------------------------
+[2026-05-15 22:38:44] [SUCCESS]
+Question: top 10 products by quantity
+SQL: SELECT TOP 10 
+    Product_Id, 
+    SUM(CAST(Quantity AS FLOAT)) AS Total_Quantity
+FROM 
+    retail_orders
+GROUP BY 
+    Product_Id
+ORDER BY 
+    Total_Quantity DESC;
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:51:21] [SUCCESS]
+Question: TOP10 products by quantity
+SQL: SELECT TOP 10 
+    Product_Id, 
+    SUM(CAST(Quantity AS FLOAT)) AS Total_Quantity
+FROM 
+    retail_orders
+GROUP BY 
+    Product_Id
+ORDER BY 
+    Total_Quantity DESC;
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:51:29] [SUCCESS]
+Question: top 10 products by quantity
+SQL: Loaded From Cache
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:51:38] [SUCCESS]
+Question: top 10 products by quantity
+SQL: Loaded From Cache
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:52:20] [SUCCESS]
+Question: top 10 products by quantity
+SQL: SELECT TOP 10 
+    Product_Id, 
+    SUM(CAST(Quantity AS FLOAT)) AS Total_Quantity
+FROM 
+    retail_orders
+GROUP BY 
+    Product_Id
+ORDER BY 
+    Total_Quantity DESC;
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:52:29] [SUCCESS]
+Question: مين فاز بكاس العالم ؟
+SQL: SELECT 'No information about World Cup is available in this table' AS result
+Insight: The dataset contains 1 rows.
+--------------------------------------------------
+[2026-05-15 22:52:33] [SUCCESS]
+Question: top 10 products by quantity
+SQL: Loaded From Cache
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:53:00] [SUCCESS]
+Question: top 10 products by quantity
+SQL: SELECT TOP 10 
+    Product_Id, 
+    SUM(CAST(Quantity AS FLOAT)) AS Total_Quantity
+FROM 
+    retail_orders
+GROUP BY 
+    Product_Id
+ORDER BY 
+    Total_Quantity DESC;
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
+[2026-05-15 22:53:07] [SUCCESS]
+Question: مين فاز بكاس العالم 
+SQL: SELECT 'No information about World Cup is available in this table' AS Message
+Insight: The dataset contains 1 rows.
+--------------------------------------------------
+[2026-05-15 22:53:09] [SUCCESS]
+Question: top 10 products by quantity
+SQL: Loaded From Cache
+Insight: The highest value in Total_Quantity belongs to TEC-AC-10003832 The dataset contains 10 rows.
+--------------------------------------------------
